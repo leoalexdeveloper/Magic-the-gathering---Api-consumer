@@ -30,7 +30,8 @@ export const Card = (props) => {
                         <hr />
 
                         <figure className="d-flex flex-column align-items-center position-relative">
-                            <img onClick={(e) => card.imageUrl && enableCardModal(e)} className="rounded rounded-4" style={{ overflow: 'hidden', cursor: "Pointer" }} src={card.imageUrl ? card.imageUrl : "../../assets/img/logo/logo.png"} alt={card.name} />
+                            {!card.imageUrl && <img onClick={(e) => card.imageUrl && enableCardModal(e)} className="rounded rounded-4" style={{ overflow: 'hidden', cursor: "Pointer" }} src={"../../assets/img/logo/logo.png"} alt={card.name} />}
+                            {card.imageUrl && <img onClick={(e) => card.imageUrl && enableCardModal(e)} className="rounded rounded-4" style={{ overflow: 'hidden', cursor: "Pointer" }} src={card.imageUrl} alt={card.name} />}
                             <hr />
                             <figcaption className="text-center">
                                 {card.name && <em><strong>Card:</strong>{" " + card.name}</em>}
