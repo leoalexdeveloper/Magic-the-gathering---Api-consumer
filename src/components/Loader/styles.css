@@ -1,0 +1,13 @@
+.loader{
+    width: 100vw;
+    height: 100vh;
+}
+
+.loader img{
+    width: 8rem;
+    height: 8rem;
+    object-fit: cover;
+    object-position:center;
+    mix-blend-mode: lighten;
+    filter: invert(1);
+}

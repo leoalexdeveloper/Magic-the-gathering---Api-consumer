@@ -1,0 +1,18 @@
+.sets-order-input ~ button{
+    background-color: white;
+    color: black;
+}
+
+.sets-order-btn-container:hover{
+    background-color: white;
+    color: black !important;
+}
+
+.sets-order-input:checked ~ button{
+    background-color: transparent;
+    color: white;
+}
+
+.sets-order-btn-container > input{
+    display:none;
+}

@@ -1,0 +1,18 @@
+.sets-filter-input ~ button{
+    background-color: transparent;
+    color: white !important;
+}
+
+.sets-filter-btn-container:hover > button{
+    background-color: white !important;
+    color: black !important;
+}
+
+.sets-filter-input:checked ~ button{
+    background-color: white;
+    color: black !important;
+}
+
+.sets-filter-btn-container > input{
+    display:none;
+}

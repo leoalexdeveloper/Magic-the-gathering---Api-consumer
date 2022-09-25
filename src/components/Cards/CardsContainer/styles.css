@@ -1,0 +1,11 @@
+.cards-container{
+    max-width: 100vw;
+    max-height: 100vh;
+    min-width: 100vw;
+    min-height: 100vh;
+    background-image: url("../../../assets/wallpapers/cards-wallpaper.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    overflow: scroll;
+}

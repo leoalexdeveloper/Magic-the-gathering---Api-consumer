@@ -1,0 +1,5 @@
+.navbar-brand img {
+object-fit:center;
+object-position: center;
+height: 4rem;
+}
