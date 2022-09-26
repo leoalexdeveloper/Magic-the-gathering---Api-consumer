@@ -5,10 +5,10 @@ import { RadioButton } from "../RadioButton";
 import { CheckButton } from "../CheckButton";
 import { toCamelCase, sortObject } from "../../../utils/utils"
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faXmark } from "@fortawesome/free-solid-svg-icons";
 import { faArrowDownUpAcrossLine } from "@fortawesome/free-solid-svg-icons";
 import { faCircleInfo } from "@fortawesome/free-solid-svg-icons"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
 
 //component
@@ -61,13 +61,16 @@ export const FilterPanel = () => {
                     <div className="bg-dark text-light border border-light px-2 d-flex flex-wrap align-items-center rounded-start">
                         Order by:
                     </div>
+
                     <CheckButton text={<FontAwesomeIcon icon={faArrowDownUpAcrossLine} />} action={orderFilter} activeParam={orderOption} />
                     <RadioButton text="Code" action={selectFilter} activeParam={filterOption} rounded="rounded" name="filter" />
                     <RadioButton text="Name" action={selectFilter} activeParam={filterOption} rounded="rounded" name="filter" />
                     <RadioButton text="Type" action={selectFilter} activeParam={filterOption} rounded="rounded" name="filter" />
                     <RadioButton text="Block" action={selectFilter} activeParam={filterOption} rounded="rounded" name="filter" />
                     <RadioButton text="Release Date" action={selectFilter} activeParam={filterOption} rounded="rounded" name="filter" />
+
                     <div className="p-0 d-flex align-items-center mx-2" title="How to use the filters">
+                        
                         <FontAwesomeIcon onClick={() => setSearchInfoModalVisible(!searchInfoModalVisible)} style={{ fontSize: '1.5rem', cursor: "pointer" }} icon={faCircleInfo} />
 
                         {

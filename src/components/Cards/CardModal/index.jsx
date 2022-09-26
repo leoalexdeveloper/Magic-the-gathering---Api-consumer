@@ -1,7 +1,11 @@
 import "./styles.css"
 import { Context } from "../../../contexts/Cards"
 import { useContext } from "react"
+
 import { returnIcons } from "../../../utils/utils"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faXmark } from "@fortawesome/free-solid-svg-icons"
+
 import magicIcons from "../../../assets/icons/icons.json"
 
 export const CardModal = () => {
@@ -10,19 +14,21 @@ export const CardModal = () => {
     const card = modalContent
 
     const closeModal = () => {
-        console.log("Close")
         dispatch({ type: "RECORD_MODAL_CARD_IMAGE", payload: {} })
     }
 
     return (
-        <div onClick={() => closeModal()} className="card-modal-container col-12 bg-dark text-light position-absolute top-0 start-0">
+        <div className="card-modal-container col-12 bg-dark text-light position-absolute top-0 start-0">
             <div className="col-12 card-container d-flex flex-column mb-2 text-light position-relative" style={{ overflow: "hidden" }}>
 
                 <div className="col-12 card-image-container d-flex flex-column align-items-center position-relative">
                     <div className="col-12 p-3 rounded">
-                        <div className="col-12 fs-6 d-flex flex-row align-items-center justify-content-start pt-2">
+                        <div className="col-12 fs-6 d-flex flex-row align-items-center justify-content-between pt-2">
+                            
                             <i className={"mx-2 bg-light text-dark rounded-circle p-2 " + card.types.map(type => returnIcons(magicIcons.cardTypes, type, "ms ms-"))}></i>
                             <div className="mx-2 text-wrap">{card.type}</div>
+
+                            <FontAwesomeIcon onClick={() => closeModal()} className="fs-4 mx-2 border rounded-circle px-2 py-1 bg-light text-dark" icon={faXmark} style={{cursor: "pointer"}} />
                         </div>
 
                         <hr />

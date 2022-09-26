@@ -1,16 +1,14 @@
 import "./styles.css"
-import magicIcons from "../../../../assets/icons/icons.json"
-import { returnIcons } from "../../../../utils/utils"
 import { useContext } from "react"
 import { Context } from "../../../../contexts/Cards"
 
-
+import { returnIcons } from "../../../../utils/utils"
+import magicIcons from "../../../../assets/icons/icons.json"
 
 export const Card = (props) => {
     const { dispatch} = useContext(Context)
     const { card } = props
     
-
     const enableCardModal = (e) => {
         dispatch({type: "RECORD_MODAL_CARD_IMAGE", payload: card})
     }

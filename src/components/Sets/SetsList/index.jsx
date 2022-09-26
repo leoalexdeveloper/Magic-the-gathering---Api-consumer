@@ -20,7 +20,7 @@ export const SetsList = () => {
     const { state, dispatch } = useContext(Context)
     const { sets, searchedSets } = state;
     const infoNotFound = "-"
-
+    
     useEffect(() => {
         loadContent(api, "https://api.magicthegathering.io/v1/sets", '', dispatch, "RECORD_SETS")
     }, [dispatch])
