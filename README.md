@@ -1,7 +1,7 @@
 # Magic-the-gathering---Api-consumer
 Magic the gathering - Api consumer
 
-A application made using React to comsume a Magic the Gathering fan api:
+An application made using React to comsume a Magic the Gathering fan api:
 https://docs.magicthegathering.io/
 
 Link da aplicação:
